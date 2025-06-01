@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One Piece Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>One Piece Quiz</h1>
+      <button id="startBtn">Spiel Starten</button>
+      <button id="shopBtn">Shop</button>
+    </header>
+
+    <main>
+      <div id="loading" class="hidden">
+        <div class="loader"></div>
+        <p>Lädt... Falls es länger dauert, bitte Geduld.</p>
+      </div>
+
+      <div id="tutorial" class="hidden">
+        <img src="images/mini-ruffy-normal.png" alt="Ruffy Tutorial" class="ruffy-img" />
+        <p>Willkommen zum One Piece Quiz! Klicke auf eine Antwort, um zu starten.</p>
+        <button id="tutorialCloseBtn">Verstanden, los geht's!</button>
+      </div>
+
+      <div id="gameContainer" class="hidden">
+        <div id="ruffyContainer">
+          <img id="ruffyImg" src="images/mini-ruffy-normal.png" alt="Ruffy" />
+          <p id="ruffyText"></p>
+        </div>
+
+        <div id="questionContainer">
+          <h2 id="questionText"></h2>
+          <ul id="answerList"></ul>
+        </div>
+
+        <button id="nextBtn" class="hidden">Weiter</button>
+
+        <div id="checkpointNotification" class="hidden">
+          <p>Checkpoint erreicht! Spiel wird gespeichert.</p>
+        </div>
+
+        <div id="xpDisplay">XP: <span id="xpAmount">0</span></div>
+      </div>
+
+      <div id="shop" class="hidden">
+        <button id="closeShopBtn">Zurück zum Spiel</button>
+        <h2>Shop</h2>
+        <p>Deine XP: <span id="shopXp">0</span></p>
+        <div id="shopItemsContainer"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
